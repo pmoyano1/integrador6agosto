@@ -1,4 +1,4 @@
-const products = require('../../utils/productsMock');
+const products = require('../../utils/mockProducts');
 const router = require('nordic/ragnar').router();
 /**
 Vamos a “simular” una llamada a la API de MeLi (por el momento, no vamos a interactuar 

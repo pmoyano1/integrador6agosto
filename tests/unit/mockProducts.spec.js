@@ -1,13 +1,13 @@
-const products = require('../../utils/productsMock');
+const products = require('../../utils/mockProducts');
 
 describe('Mockear Productos', () => {
-    it('Deberia ser un array', () => {
+    it('1) Deberia ser un array', () => {
         expect(products).toBeInstanceOf(Array);
     });
-    it('Deberia tener cuatro productos', () => {
+    it('2) Deberia tener cuatro productos', () => {
         expect(products.length).toBe(4);
     });
-    it('Los productos deben tener id,title,description,price y quantity', () => {
+    it('3) Los productos deben tener id,title,description,price y quantity', () => {
       
         ['id', 'title', 'price', 'description', 'quantity'].forEach((x) => {
             expect(products[0]).toHaveProperty(x);

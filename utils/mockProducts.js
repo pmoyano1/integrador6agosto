@@ -1,6 +1,10 @@
 /**
  * Crear un array de productos y exportarlo para 
  * que lo utilice la ruta /products de la carpeta api.
+ * 
+ * Una vez creado, deberás ejecutar en cónsola el comando
+ * npm run test:unit productsMock.spec.js y corroborar que
+ * todos los tests estén pasando.
  */
 
 let products = [
@@ -28,7 +32,7 @@ let products = [
     {
         id: 'MLA123',
         title: 'Luca',
-        quantity: 1,
+        quantity: 0,
         price: 760,
         description: 'Último gato.'
     },
