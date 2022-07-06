@@ -1,4 +1,3 @@
-const products = require('../../utils/mockProducts');
 const router = require('nordic/ragnar').router();
 /**
 Vamos a “simular” una llamada a la API de MeLi (por el momento, no vamos a interactuar 
@@ -19,7 +18,7 @@ Para que este endpoint funcione, debemos implementar la ruta en /api/index.js
 * */
 
 router.get('/', (req, res) => {
-    res.json(products);
+
 });
 
 module.exports = router;

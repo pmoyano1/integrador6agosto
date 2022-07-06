@@ -3,7 +3,6 @@
  */
 const router = require('nordic/ragnar').router();
 const demo = require('./demo');
-const products = require('./1-products/products');
 const currencies = require('./2-currencies/currencies');
 const queryProducts = require('./3-query/products-query');
 /**
