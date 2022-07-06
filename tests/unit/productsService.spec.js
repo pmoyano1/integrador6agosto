@@ -7,7 +7,7 @@ jest.mock('nordic/restclient', () => () => ({
             data: {
                 results: [{ id: 'MLA23255', title: 'Samsung '}]
             }}))
-        // .mockRejectedValueOnce(Promise.reject(Error))
+        .mockRejectedValueOnce('Error 403')
 }));
 
 describe('producsService', () => {
@@ -20,12 +20,11 @@ describe('producsService', () => {
         }
     });
 
-    // it('2) Arroja un error cuando falla la llamada', async () => {
-    //     try {
-    //         const response = await productsService.getProducts('celular', 10);
-    //     } catch(err) {
-    //         // console.log(err instanceof Array)
-    //         expect(err).toBeInstanceOf(Error);
-    //     }
-    // })
+    it('2) Arroja un error cuando falla la llamada', async () => {
+        try {
+            const response = await productsService.getProducts('celular', 10);
+        } catch(err) {
+            expect(err).toBeInstanceOf(Error);
+        }
+    })
 });
