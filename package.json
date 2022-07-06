@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "node-mocks-http": "1.11.0",
-    "nordic": "^7.0.0"
+    "nordic": "^7.0.0",
+    "supertest": "6.2.4"
   },
   "devDependencies": {
     "nordic-dev": "^7.0.0",
