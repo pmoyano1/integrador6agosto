@@ -11,7 +11,6 @@ comprobar que pasa el test `1) logPath`.
 ********************************************************/
 
 exports.logPath = function logPath(req, res, next) {
-  console.log(req.baseUrl);
   next();
 }
 
@@ -31,10 +30,3 @@ correr el comando npm run test:unit:watch middlewares y
 comprobar que pasa el test `2) supportedCurrencies`.
 ********************************************************/
 
-exports.supportedCurrencies = function supportedCurrencies(req, res, next) {
-  const currencies = {
-    currencies: ["EUR", "USD"]
-  }
-  res.locals.currencies = currencies;
-  next();
-}
