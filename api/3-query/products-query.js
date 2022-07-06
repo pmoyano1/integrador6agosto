@@ -21,8 +21,10 @@ router.get('/', (req, res) => {
     const { title, minPrice, maxPrice } = req.query;
     if (title && minPrice) {
         res.json(products.filter(p => p.title.includes(title) && p.price >= minPrice));
-    } else {
+    } else if (title){
         res.json(products.filter(p => p.title.includes(title)));
+    } else {
+        res.send('No se encontraron productos.')
     }
 });
 
