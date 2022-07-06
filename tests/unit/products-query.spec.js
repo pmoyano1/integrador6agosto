@@ -1,8 +1,8 @@
 const request = require('supertest');
 const api = require('../../index');
 
-describe('La ruta query-products del ejercicio 3', () => {  
-    let baseUrl = `/api/query-products?domain_override=mercadolibre.com.ar&`;
+describe('La ruta /products-query del ejercicio 3', () => {  
+    let baseUrl = `/api/products-query?domain_override=mercadolibre.com.ar&`;
 
     it('1) Responde con el producto que matchee con el nombre que le enviamos por query', async () => {
         let name = 'Mouse';

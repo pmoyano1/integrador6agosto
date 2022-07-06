@@ -8,7 +8,7 @@ const queryProducts = require('./3-query/products-query');
  * Demo router
  */
 router.use('/demo', demo);
-router.use('/query-products', queryProducts);
+router.use('/products-query', queryProducts);
 
 /**
  * Expose API router
