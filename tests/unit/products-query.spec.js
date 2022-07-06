@@ -8,6 +8,7 @@ describe('La ruta query-products del ejercicio 3', () => {
         let name = 'Mouse';
         const response = await request(api.app).get(`${baseUrl}name=${name}`);
         let products = await JSON.parse(response.res.text);
+
         expect(products).toBeInstanceOf(Array);
         expect(products[0].name).toBe('Mouse');
     });
@@ -17,7 +18,7 @@ describe('La ruta query-products del ejercicio 3', () => {
         let name = 'Notebook';
         const response = await request(api.app).get(`${baseUrl}name=${name}&minPrice=${minPrice}`);
         let products = await JSON.parse(response.res.text);
-        // console.log(products);
+
         products.forEach(p => {
             expect(p.name).toBe('Notebook');
             expect(p.price).toBeGreaterThan(minPrice);
@@ -31,6 +32,7 @@ describe('La ruta query-products del ejercicio 3', () => {
         let name = 'Notebook';
         const response = await request(api.app).get(`${baseUrl}name=${name}&minPrice=${minPrice}&maxPrice=${maxPrice}`);
         let products = await JSON.parse(response.res.text);
+
         expect(products).toBeInstanceOf(Array);
         expect(products[0].price).toBeGreaterThanOrEqual(minPrice);
         expect(products[0].price).toBeLessThanOrEqual(maxPrice);
@@ -39,16 +41,15 @@ describe('La ruta query-products del ejercicio 3', () => {
     it('4) Devueve un mensaje de error si no encuentra productos que matcheen', async () => {
         const response = await request(api.app).get(`${baseUrl}name=Benito&minPrice=43534`);
         let msg = await JSON.parse(response.res.text);
-        // console.log(msg);
+
         expect(msg).toMatch(/no se encontraron productos/i);
     });
 
     it('5) Devuelve un mensaje de error si el producto no tiene stock', async () => {
         const response = await request(api.app).get(`${baseUrl}name=Macbook&minPrice=1500`);
         let msg = await JSON.parse(response.res.text);
+        
         expect(msg).toMatch(/no se encontraron productos/i);
-    });
-
-    
+    });   
 
 });
