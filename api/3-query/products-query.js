@@ -1,5 +1,3 @@
-const router = require('nordic/ragnar').router();
-
 /**
 Ejercicio 3 - Query
 
@@ -42,37 +40,3 @@ Despues de implementar el código,
 correr el comando npm run test:unit:watch products-query y 
 comprobar que pasan todos los tests.
 ********************************************************/
-let products = [
-    {
-        name: "Mouse",
-        price: 4598,
-        stock: 30,
-    },
-    {
-        name: "Notebook",
-        price: 2598,
-        stock: 30,
-    },
-    {
-        name: "Macbook",
-        price: 9898,
-        stock: 0,
-    },
-];
-
-
-router.get('/', (req, res) => {
-    const { name, minPrice, maxPrice } = req.query;
-    if(name && minPrice && maxPrice) {
-        let newProducts = products.filter(p => p.name.includes(name) && p.price >= minPrice &&p.price <= maxPrice && p.stock);
-        res.json(newProducts.length ? newProducts : 'No se encontraron productos.');
-    } else if (name && minPrice) {
-        let newProducts = products.filter(p => p.name.includes(name) && p.price >= minPrice && p.stock);
-        res.json(newProducts.length ? newProducts : 'No se encontraron productos.');
-    } else if (name){
-        let newProducts = products.filter(p => p.name.includes(name) && p.stock)
-        res.json(newProducts.length ? newProducts : 'No se encontraron productos.');
-    } 
-});
-
-module.exports = router;
