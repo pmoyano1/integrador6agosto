@@ -1,10 +1,28 @@
 const router = require('nordic/ragnar').router();
-const products = require('../../utils/mockProducts');
 
 /**
 Ejercicio 3 - Query
-Utilizando el array de productos que creamos en /utils/mockProducts, vamos 
-a implementar varios endpoints en nuestra app que nos permitan filtrar los
+
+let products = [
+    {
+        name: "Mouse",
+        price: 4598,
+        stock: 30,
+    },
+    {
+        name: "Notebook",
+        price: 2598,
+        stock: 30,
+    },
+    {
+        name: "Macbook",
+        price: 9898,
+        stock: 0,
+    },
+];
+
+Utilizando el array de productos detallado arriba, vamos 
+a ''implementar varios endpoints'' en nuestra app que nos permitan filtrar los
 productos según los siguientes criterios:
 
 1. Nombre: nos devolverá los productos cuyo nombre contenga el texto que pasamos
@@ -14,72 +32,41 @@ por parámetro (QueryString).
 definido por parámetro (QueryString).
 
 3. Stock: Nos devolverá los productos que tienen stock.
+
+NOTA: Estar atento a los res.json y los bloques if/else. Para estar seguris ponere
+un return a cada res.json o cerrar bien los bloques.
 */
+let products = [
+    {
+        name: "Mouse",
+        price: 4598,
+        stock: 30,
+    },
+    {
+        name: "Notebook",
+        price: 2598,
+        stock: 30,
+    },
+    {
+        name: "Macbook",
+        price: 9898,
+        stock: 0,
+    },
+];
 
 
 router.get('/', (req, res) => {
-    const { title, minPrice, maxPrice } = req.query;
-    if (title && minPrice) {
-        res.json(products.filter(p => p.title.includes(title) && p.price >= minPrice));
-    } else if (title){
-        res.json(products.filter(p => p.title.includes(title)));
-    } else {
-        res.send('No se encontraron productos.')
-    }
+    const { name, minPrice, maxPrice } = req.query;
+    if(name && minPrice && maxPrice) {
+        let newProducts = products.filter(p => p.name.includes(name) && p.price >= minPrice &&p.price <= maxPrice && p.stock);
+        res.json(newProducts.length ? newProducts : 'No se encontraron productos.');
+    } else if (name && minPrice) {
+        let newProducts = products.filter(p => p.name.includes(name) && p.price >= minPrice && p.stock);
+        res.json(newProducts.length ? newProducts : 'No se encontraron productos.');
+    } else if (name){
+        let newProducts = products.filter(p => p.name.includes(name) && p.stock)
+        res.json(newProducts.length ? newProducts : 'No se encontraron productos.');
+    } 
 });
-
-
-
-/*
-router.get('/', (req, res) => {
-    const { title, minPrice, maxPrice } = req.query;
-    if (title && minPrice && maxPrice) {
-        let sendProducts = products.filter(p => 
-            p.title.substring(title) && p.price >= minPrice && p.price <= maxPrice && p.quantity > 0
-        );
-        if (sendProducts.length) {
-            res.json(sendProducts)
-        } else {
-            'No se encontraron productos.'
-        }
-    } else if (title && minPrice) {
-        let sendProducts = products.filter(p => 
-            p.title.substring(title) && p.price >= minPrice && p.quantity > 0
-        );
-        if (sendProducts.length) {
-            res.json(sendProducts)
-        } else {
-            'No se encontraron productos.'
-        }
-    } else if (title && maxPrice) {
-        let sendProducts = products.filter(p => 
-            p.title.substring(title) && p.price <= maxPrice && p.quantity > 0
-        );
-        if (sendProducts.length) {
-            res.json(sendProducts)
-        } else {
-            'No se encontraron productos.'
-        }
-    } else if (maxPrice && minPrice) {
-        let sendProducts = products.filter(p => 
-            p.price >= minPrice && p.price <= maxPrice && p.quantity > 0
-        );
-        if (sendProducts.length) {
-            res.json(sendProducts)
-        } else {
-            'No se encontraron productos.'
-        }
-    } else if (title) {
-        let sendProducts = products.filter(p => 
-            p.title.substring(title) && p.quantity > 0
-        );
-        if (sendProducts.length) {
-            res.json(sendProducts)
-        } else {
-            'No se encontraron productos.'
-        }
-    }
-});
-**/
 
 module.exports = router;
