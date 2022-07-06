@@ -35,7 +35,12 @@ definido por parámetro (QueryString).
 
 NOTA: Estar atento a los res.json y los bloques if/else. Para estar seguris ponere
 un return a cada res.json o cerrar bien los bloques.
-*/
+
+********************************************************
+Despues de implementar el código, 
+correr el comando npm run test:unit:watch products-query y 
+comprobar que pasan todos los tests.
+********************************************************/
 let products = [
     {
         name: "Mouse",

@@ -27,7 +27,7 @@ llamada "currencies" que contenga una lista de monedas:
 
 ********************************************************
 Despues de implementar el código, 
-correr el comando npm run test:unit middlewares y 
+correr el comando npm run test:unit:watch middlewares y 
 comprobar que pasa el test `2) supportedCurrencies`.
 ********************************************************/
 
