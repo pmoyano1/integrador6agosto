@@ -1,19 +1,20 @@
 const products = require('../../utils/mockProducts');
 
-describe('Mockear Productos', () => {
-    it('1) Deberia ser un array', () => {
+describe('Los productos que vamos a utilizar en el endpoint /api/products', () => {
+    it('1) Son un array de productos', () => {
         expect(products).toBeInstanceOf(Array);
     });
-    it('2) Deberia tener cuatro productos', () => {
+
+    it('2) Son cuatro en total', () => {
         expect(products.length).toBe(4);
     });
-    it('3) Los productos deben tener id,title,description,price y quantity', () => {
-      
-        ['id', 'title', 'price', 'description', 'quantity'].forEach((x) => {
-            expect(products[0]).toHaveProperty(x);
-            expect(products[1]).toHaveProperty(x);
-            expect(products[2]).toHaveProperty(x);
-            expect(products[3]).toHaveProperty(x);
+
+    it('3) Los productos deben tener las propiedades id, title, description, price y quantity', () => {
+        ['id', 'title', 'price', 'description', 'quantity'].forEach((p) => {
+            expect(products[0]).toHaveProperty(p);
+            expect(products[1]).toHaveProperty(p);
+            expect(products[2]).toHaveProperty(p);
+            expect(products[3]).toHaveProperty(p);
         });
     });
 });
