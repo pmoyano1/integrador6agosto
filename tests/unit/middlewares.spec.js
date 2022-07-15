@@ -8,12 +8,12 @@ describe('1) logPath', () => {
         url: '/api/currencies'
     });
     const res = httpMocks.createResponse();
-    const mockConsole = jest.spyOn(console, 'log');
+    const mockLog = jest.spyOn(console, 'log');
 
     it('Debería imprimir en consola el path de la request', () => {
         return logPath(req, res, () => {
-            expect(mockConsole).toHaveBeenCalled();
-            expect(mockConsole).toHaveBeenCalledWith(req.originalUrl || req.baseUrl);
+            expect(mockLog).toHaveBeenCalled();
+            expect(mockLog).toHaveBeenCalledWith(req.originalUrl || req.baseUrl);
         });
     });
 });
