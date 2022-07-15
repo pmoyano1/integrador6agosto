@@ -9,7 +9,7 @@ describe('Los productos que vamos a utilizar en el endpoint /api/products', () =
         expect(products.length).toBe(4);
     });
 
-    it('3) Los productos deben tener las propiedades id, title, description, price y quantity', () => {
+    it('3) Cada uno tiene las propiedades id, title, description, price y quantity', () => {
         ['id', 'title', 'price', 'description', 'quantity'].forEach((p) => {
             expect(products[0]).toHaveProperty(p);
             expect(products[1]).toHaveProperty(p);
