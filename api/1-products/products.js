@@ -15,6 +15,9 @@ const router = require('nordic/ragnar').router();
  * Debemos requerir el archivo con los productos para enviarlos como respuesta.
  * 
  * Para que este endpoint funcione, debemos implementar la ruta en /api/index.js
+ * 
+ * Por último, deberás ingresar a la URL https://dev.mercadolibre.com.ar:8443/api/products
+ * y se deberá ver un JSON con los productos en pantalla.
  */
 
 router.get('/', (req, res) => {
