@@ -6,7 +6,7 @@
  * 
  ********************************************************
  * Despues de implementar el código, correr el comando
- * `npm run test:unit:watch middlewares` y  comprobar que 
+ * `npm run test:unit:watch middlewares` y comprobar que 
  * pasa el test `1) logPath`.
  ********************************************************/
 

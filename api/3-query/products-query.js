@@ -19,24 +19,24 @@ let products = [
     },
 ];
 
-Utilizando el array de productos detallado arriba, vamos 
-a implementar un endpoint en nuestra app que nos permitan filtrar los
-productos según los siguientes criterios recibidos por query:
+Utilizando el array de productos detallado arriba, vamos a implementar
+un endpoint en nuestra app que nos permitan filtrar los productos según 
+los siguientes criterios recibidos por query:
 
-1. Nombre: nos devolverá los productos cuyo nombre contenga el texto que pasamos
-por parámetro (QueryString).
+1. Nombre: nos devolverá los productos cuyo nombre contenga el texto que 
+pasamos por parámetro (QueryString).
 
-2. Precio: Nos devolverá los productos cuyo precio se encuentre dentro del rango
-definido por parámetro (QueryString).
+2. Precio: Nos devolverá los productos cuyo precio se encuentre dentro del 
+rango definido por parámetro (QueryString).
 
 3. Stock: Nos devolverá sólo los productos que tienen stock.
 
-NOTA: Estar atento a los res.json y los bloques if/else. Para estar 
-seguros, ponerle un return a cada res.json o corroborar que no quede 
-ningún res fuera de un if/else.
+NOTA: Estar atentos a los res.json y los bloques if/else. Para estar seguros, 
+ponerle un return a cada res.json o corroborar que no quede ningún res fuera 
+de un if/else.
 
 ********************************************************
-Despues de implementar el código, 
-correr el comando npm run test:unit:watch products-query y 
-comprobar que pasan todos los tests.
+Despues de implementar el código, correr el comando 
+`npm run test:unit:watch products-query` y comprobar 
+que pasan todos los tests.
 ********************************************************/
