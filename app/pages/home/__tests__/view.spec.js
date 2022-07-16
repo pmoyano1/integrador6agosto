@@ -3,7 +3,7 @@ const HomeView = require('../view');
 const { render, screen } = require('@testing-library/react');
 const mockProducts = require('../../../../utils/mockProductsEI');
 
-describe('Ejercicio 4 - La View de /home', () => {
+describe('Ejercicio 4 - La View de Home', () => {
     let component;
     const i18n = { gettext: text => text };
     beforeEach(() => {
@@ -20,7 +20,7 @@ describe('Ejercicio 4 - La View de /home', () => {
     })
 })
 
-describe('Ejericitación Integradora - La View de /home', () => {
+xdescribe('Ejericitación Integradora - La View de Home', () => {
     let component;
     const i18n = { gettext: text => text };
     beforeEach(() => {
