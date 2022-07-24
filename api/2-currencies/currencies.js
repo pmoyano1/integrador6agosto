@@ -1,4 +1,6 @@
 /** 
+ * Clase 2 - Ejercitación
+ * 
  * Ejercicio 2 - Crear un endpoint /api/currencies
  * 
  * Este endpoint debe utilizar el middleware "supportedCurrencies" 

@@ -1,5 +1,7 @@
 /**
- * Ejercicio 2 - Desarrollar el middleware "logPath". 
+ * Clase 2 - Ejercitación
+ * 
+ * Ejercicio 1 - Desarrollar el middleware "logPath". 
  * 
  * Cada vez que accedemos a una ruta debería imprimir en
  * consola el path de dicha ruta.
