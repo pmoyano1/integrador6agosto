@@ -3,28 +3,29 @@ const HomeView = require('../view');
 const { render, screen } = require('@testing-library/react');
 const mockProducts = require('../../../../utils/mockProductsEI');
 
-describe('Ejercicio 4 - La View de /home', () => {
+describe('Ejercicio 4 - La View de Home', () => {
     let component;
     const i18n = { gettext: text => text };
     beforeEach(() => {
-        component = render(<HomeView i18n={i18n} title='Productos' products={[]}/>)
-    })
+        component = render(<HomeView i18n={i18n} title='Productos' products={[]}/>);
+    });
+
     it('1) Renderiza', () => {
         const { asFragment } = component;
         expect(asFragment()).toMatchSnapshot();        
-    })
+    });
 
-    it('2) Muestra en pantalla un <h2> con la prop `title`', () => {
-        const title = screen.getByText('Productos');
+    it('2) Muestra en pantalla un <h2> con el string que le pasemos la prop `title`', () => {
+        const title = screen.getByRole('heading', { level: 2 });
         expect(title).toBeInTheDocument();
-    })
-})
+    });
+});
 
-describe('Ejericitación Integradora - La View de /home', () => {
+xdescribe('Ejericitación Integradora - La View de Home', () => {
     let component;
     const i18n = { gettext: text => text };
     beforeEach(() => {
-        component = render(<HomeView i18n={i18n} title='Productos' products={mockProducts}/>)
+        component = render(<HomeView i18n={i18n} title='Productos' products={mockProducts}/>);
     });
 
     it('1) Renderiza', () => {
@@ -32,8 +33,8 @@ describe('Ejericitación Integradora - La View de /home', () => {
         expect(asFragment()).toMatchSnapshot();        
     });
 
-    it('2) Muestra un array de productos', () => {
+    it('2) Renderiza una lista de productos', () => {
         const products = screen.getAllByRole('listitem');
         expect(products.length).toBe(10);
-    })
-})
+    });
+});

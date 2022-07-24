@@ -1,7 +1,6 @@
 const { logPath, supportedCurrencies } = require('../../api/2-currencies/middlewares');
 const httpMocks = require('node-mocks-http');
 
-
 describe('1) logPath', () => {
     const req = httpMocks.createRequest({
         method: 'GET', 
