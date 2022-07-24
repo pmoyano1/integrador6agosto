@@ -2,7 +2,7 @@ const router = require('nordic/ragnar').router();
 /**
  * Vamos a “simular” una llamada a la API de MeLi (por el momento,
  * no vamos a interactuar con la API oficial, eso vamos a hacerlo 
- * en las próximas clases). Para lograrlo, vamos a  necesitar crear 
+ * en las próximas clases). Para lograrlo, vamos a necesitar crear 
  * un array de productos en el archivo ubicado en /utils/mockProducts.js 
  * 
  * Queremos que al ingresar a la ruta “/api/products” se nos muestren
