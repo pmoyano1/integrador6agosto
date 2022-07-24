@@ -10,8 +10,8 @@ jest.mock('nordic/restclient', () => () => ({
         .mockRejectedValueOnce('Error 403')
 }));
 
-describe('producsService', () => {
-    it('1) Devuelve un array de productos', () => {
+describe('El servicio productsService', () => {
+    it('1) Devuelve un array de productos cuando la llamada es exitosa', () => {
         return productsService.getProducts('MLA', 'celular', 10)
             .then(response=> {
                 expect(response).toBeInstanceOf(Array);

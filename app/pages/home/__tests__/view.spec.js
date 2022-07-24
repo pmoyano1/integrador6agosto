@@ -6,6 +6,7 @@ const mockProducts = require('../../../../utils/mockProductsEI');
 describe('Ejercicio 4 - La View de Home', () => {
     let component;
     const i18n = { gettext: text => text };
+    
     beforeEach(() => {
         component = render(<HomeView i18n={i18n} message='Hello World' products={[]}/>);
     });
@@ -21,9 +22,10 @@ describe('Ejercicio 4 - La View de Home', () => {
     });
 });
 
-xdescribe('Ejericitación Integradora - La View de Home', () => {
+xdescribe('Ejercitación Integradora - La View de Home', () => {
     let component;
     const i18n = { gettext: text => text };
+
     beforeEach(() => {
         component = render(<HomeView i18n={i18n} message='Hello World' products={mockProducts}/>);
     });
