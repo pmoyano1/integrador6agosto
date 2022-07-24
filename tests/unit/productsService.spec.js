@@ -21,7 +21,7 @@ describe('producsService', () => {
     it('2) Arroja un error cuando falla la llamada', () => {
         return productsService.getProducts('celular', 10)
             .catch(err => {
-                expect(err).toBeInstanceOf(Error)
+                expect(err).toBeInstanceOf(Error);
             });
     });
 });
