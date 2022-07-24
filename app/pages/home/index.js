@@ -21,10 +21,14 @@
 /**
  * Ejercitación Integradora:
  * 
- * Una vez cumplidas todas las consignas, deberás descomentar el segundo
- * `describe` del archivo de test, quitándole la `x` que le antecede, y 
- * corroborar que los tests pasan. 
+ * Una vez cumplidas todas las consignas, descomentar el segundo `describe`
+ * del archivo /__tests__/view.spec.js quitándole la `x` que lo antecede 
+ * y corroborar que los tests pasan. 
  * 
+ * Por otro lado ejecutar el comando `npm run test:unit:watch controller` 
+ * y corroborar que el test que prueba el funcionamiento del controller, pase.
+ * 
+ *****************************************************************************
  * NOTA: Para que los tests de la view de esta page pasen, primero deberás
  * haber implementado el servicio que trae los productos de la API de MeLi.
  */
