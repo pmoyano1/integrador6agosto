@@ -7,7 +7,7 @@ describe('Ejercicio 4 - La View de Home', () => {
     let component;
     const i18n = { gettext: text => text };
     beforeEach(() => {
-        component = render(<HomeView i18n={i18n} title='Productos' products={[]}/>);
+        component = render(<HomeView i18n={i18n} message='Hello World' products={[]}/>);
     });
 
     it('1) Renderiza', () => {
@@ -15,9 +15,9 @@ describe('Ejercicio 4 - La View de Home', () => {
         expect(asFragment()).toMatchSnapshot();        
     });
 
-    it('2) Muestra en pantalla un <h2> con el string que le pasemos la prop `title`', () => {
-        const title = screen.getByRole('heading', { level: 2 });
-        expect(title).toBeInTheDocument();
+    it('2) Muestra en pantalla un <h2> con el string que le pasemos a la prop `message`', () => {
+        const message = screen.getByRole('heading', { level: 2 });
+        expect(message).toBeInTheDocument();
     });
 });
 
@@ -25,7 +25,7 @@ xdescribe('Ejericitación Integradora - La View de Home', () => {
     let component;
     const i18n = { gettext: text => text };
     beforeEach(() => {
-        component = render(<HomeView i18n={i18n} title='Productos' products={mockProducts}/>);
+        component = render(<HomeView i18n={i18n} message='Hello World' products={mockProducts}/>);
     });
 
     it('1) Renderiza', () => {
