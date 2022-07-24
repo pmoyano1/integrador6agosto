@@ -52,13 +52,13 @@ describe('La ruta /products-query del ejercicio 3', () => {
         const response = await request(api.app).get(`${baseUrl}name=Benito&minPrice=43534`);
         let msg = await JSON.parse(response.res.text);
 
-        expect(msg).toMatch(/no se encontraron productos/i);
+        expect(msg).toMatch('No se encontraron productos');
     });
 
     it('7) Devuelve un mensaje de error si el producto no tiene stock', async () => {
         const response = await request(api.app).get(`${baseUrl}name=Macbook&minPrice=1500`);
         let msg = await JSON.parse(response.res.text);
         
-        expect(msg).toMatch(/no se encontraron productos/i);
+        expect(msg).toMatch('No se encontraron productos');
     });   
 });
