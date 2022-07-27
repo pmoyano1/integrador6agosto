@@ -19,6 +19,7 @@ describe('Ejercicio 4 - La View de Home', () => {
     it('2) Muestra en pantalla un <h2> con el string que le pasemos a la prop `message`', () => {
         const message = screen.getByRole('heading', { level: 2 });
         expect(message).toBeInTheDocument();
+        expect(message.innerHTML).toBe('Hello World');
     });
 });
 

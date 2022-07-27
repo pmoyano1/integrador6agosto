@@ -17,7 +17,7 @@ describe('El middleware fetchProducts', () => {
     });
     const res = createResponse();
     
-    it('1) Guarda un array de producos en res.locals.products', () => {
+    it('1) Guarda un array de productos en res.locals.products', () => {
         return fetchProducts(req, res, () => {
             expect(res.locals.products).toBeInstanceOf(Array);
             expect(res.locals.products).toHaveLength();
