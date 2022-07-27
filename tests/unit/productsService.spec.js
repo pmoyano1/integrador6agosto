@@ -15,6 +15,7 @@ describe('El servicio productsService', () => {
         return productsService.getProducts('MLA', 'celular', 10)
             .then(response=> {
                 expect(response).toBeInstanceOf(Array);
+                expect(response[0].id).toBe('MLA23255');
             });
     });
 
