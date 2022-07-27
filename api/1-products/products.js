@@ -15,6 +15,7 @@ const router = require('nordic/ragnar').router();
  * -quantity
  * 
  * Debemos requerir el archivo con los productos para enviarlos como respuesta.
+ * El mismo se encuentra en /app/utils/mockProducts.js
  * 
  * Para que este endpoint funcione, debemos implementar la ruta en /api/index.js
  * 
