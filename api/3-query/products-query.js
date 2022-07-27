@@ -20,7 +20,7 @@ let products = [
 ];
 
 Utilizando el array de productos detallado arriba, vamos a implementar
-un endpoint en nuestra app que nos permitan filtrar los productos según 
+un endpoint en nuestra app que nos permita filtrar los productos según 
 los siguientes criterios recibidos por query:
 
 1. Nombre: nos devolverá los productos cuyo nombre contenga el texto que 

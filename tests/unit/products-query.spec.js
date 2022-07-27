@@ -10,6 +10,7 @@ describe('La ruta /products-query del ejercicio 3', () => {
         let products = await JSON.parse(response.res.text);
 
         expect(products).toBeInstanceOf(Array);
+        expect(products.length).toBe(1);
         expect(products[0].name).toBe('Mouse');
     });
 
@@ -20,6 +21,7 @@ describe('La ruta /products-query del ejercicio 3', () => {
         let products = await JSON.parse(response.res.text);
 
         expect(products).toBeInstanceOf(Array);
+        expect(products.length).toBe(1);
         expect(products[0].name).toBe('Notebook');
         expect(products[0].price).toBeGreaterThan(minPrice);
     });
@@ -32,6 +34,7 @@ describe('La ruta /products-query del ejercicio 3', () => {
         let products = await JSON.parse(response.res.text);
 
         expect(products).toBeInstanceOf(Array);
+        expect(products.length).toBe(1);
         expect(products[0].price).toBeGreaterThanOrEqual(minPrice);
         expect(products[0].price).toBeLessThanOrEqual(maxPrice);
     });
