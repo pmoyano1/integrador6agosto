@@ -1,4 +1,4 @@
-const { fetchProducts } = require('../../app/pages/home/controller');
+const { fetchProducts } = require('../../app/pages/products/controller');
 const { createRequest, createResponse } = require('node-mocks-http');
 const restclient = require('nordic/restclient');
 const mockProducts = require('../utils/products.json');
