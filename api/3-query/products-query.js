@@ -37,6 +37,6 @@ de un if/else.
 
 ********************************************************
 Despues de implementar el código, correr el comando 
-`npm run test:unit:watch products-query` y comprobar 
+`npm run test:unit:watch products-query-route` y comprobar 
 que pasan todos los tests.
 ********************************************************/
