@@ -10,6 +10,11 @@
  * NOTA: Para poder visualizar el resultado en el navegador, es necesario 
  * implementar esta ruta en /api/index.js
  * 
- * Por último, deberás ingresar a la URL https://dev.mercadolibre.com.ar:8443/api/currencies
+ * Deberás ingresar a la URL https://dev.mercadolibre.com.ar:8443/api/currencies
  * y se deberá ver un JSON con las divisas en pantalla.
+ * 
+ ************************************************************************************
+ * Despues de implementar el código, correr el comando
+ * `npm run test:unit:watch currencies-route` y comprobar que pasan todos los tests.
+ ***********************************************************************************
  */
