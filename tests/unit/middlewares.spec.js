@@ -24,10 +24,10 @@ describe('2) supportedCurrencies', () => {
     });
     const res = httpMocks.createResponse();
 
-    it('Debe guardar en res.locals.currencies un objecto con la propiedad `currencies` que contenga un array de divisas (EUR, USD)', () => {
+    it('Debe guardar en res.locals.currencies un array de divisas (EUR, USD)', () => {
         return supportedCurrencies(req, res, () => {
-            expect(typeof res.locals.currencies).toBe('object');
-            expect(res.locals.currencies.currencies).toEqual(expect.arrayContaining(["EUR", "USD"]));
+            expect(res.locals.currencies).toBeInstanceOf(Array);
+            expect(res.locals.currencies).toEqual(expect.arrayContaining(["EUR", "USD"]));
         });
     });
 });
