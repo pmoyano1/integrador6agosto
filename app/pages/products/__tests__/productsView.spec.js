@@ -8,7 +8,7 @@ describe('Ejercitación Integradora - La View de Products', () => {
     const i18n = { gettext: text => text };
 
     beforeEach(() => {
-        component = render(<ProductsView i18n={i18n} message='Hello World' products={mockProducts}/>);
+        component = render(<ProductsView i18n={i18n} products={mockProducts}/>);
     });
 
     it('1) Renderiza', () => {
